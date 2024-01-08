@@ -17,10 +17,10 @@ acc = Client("myacc",api_id=api_id,api_hash=api_hash,session_string=ss)
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
- editable = await m.reply_text("**I am a simple save restricted bot**.\n\nSend message link to clone/download here\n Must join:- @Bypass_restricted")
+ editable = await m.reply_text("**๛MR๛R͜͡AJPUT๛ I am a PUBLIC CHANNEL save restricted bot**.\n\nSend message link to clone/download here\n Must join:- @upsc_g_s")
 @bot.on_message(filters.command(["bulk"]))
 async def account_login(bot: Client, m: Message):
- editable = await m.reply_text("**I am not an advanced bot")
+ editable = await m.reply_text("**I am not an private channel forwarder bot")
 
 # download status
 def downstatus(statusfile,message):
@@ -34,9 +34,9 @@ def downstatus(statusfile,message):
             txt = downread.read()
         try:
             bot.edit_message_text(message.chat.id, message.id, f"__Downloaded__ : **{txt}**")
-            time.sleep(10)
+            time.sleep(2)
         except:
-            time.sleep(5)
+            time.sleep(1)
 
 
 # upload status
@@ -45,15 +45,15 @@ def upstatus(statusfile,message):
         if os.path.exists(statusfile):
             break
 
-    time.sleep(3)      
+    time.sleep(1)      
     while os.path.exists(statusfile):
         with open(statusfile,"r") as upread:
             txt = upread.read()
         try:
             bot.edit_message_text(message.chat.id, message.id, f"__Uploaded__ : **{txt}**")
-            time.sleep(10)
+            time.sleep(2)
         except:
-            time.sleep(5)
+            time.sleep(1)
 
 
 # progress writter
